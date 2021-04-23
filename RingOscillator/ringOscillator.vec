@@ -1,0 +1,13 @@
+<PinDef>
+A1, A2, Q1
+</PinDef>
+<TestVector>
+# ring oscillator system
+# set result to x can test reset and not enable, can't test for the oscillating
+	00 0
+	01 X
+	10 0
+	11 0
+
+</TestVector>
+# End of the test vector file
