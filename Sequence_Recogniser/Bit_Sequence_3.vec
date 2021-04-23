@@ -1,0 +1,37 @@
+# 9-bit Sequence Recognition
+<PinDef>
+	A3, A4, A5, Q2
+	#ClockSeq, nResetSeq, DataIn, MatchAll
+</PinDef>
+<TestVector>
+	000 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C10 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 1
+	C10 0
+	000 0
+</TestVector>
+
+#Bit Sequence: 110110101
