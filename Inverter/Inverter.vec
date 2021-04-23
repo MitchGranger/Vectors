@@ -1,0 +1,12 @@
+<PinDef>
+A0,Q0
+</PinDef>
+<TestVector>
+# inverter test
+0 1
+1 0
+0 1
+1 0
+0 1
+</TestVector>
+# End of the test vector file
