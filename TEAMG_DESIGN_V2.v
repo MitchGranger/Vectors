@@ -1490,21 +1490,21 @@ module TEAMG_DESIGN(
 	A3,
 	A4,
 	A5,
-	Clock288,
+	A7,
 	Q0,
 	Q1,
 	Q2,
-	Rx,
-	iD0,
-	iD1,
-	iD2,
-	iD3,
-	iD4,
-	iD5,
-	iD6,
-	iLoad,
-	iP,
-	nReset
+	A9,
+	Q3,
+	Q4,
+	Q5,
+	Q6,
+	Q7,
+	Q8,
+	Q9,
+	Q11,
+	Q10,
+	A8,
 );
 input A0;
 input A1;
@@ -1554,7 +1554,7 @@ TEAMG_Circuit4 TEAMG_Circuit4_1(
 	.iD5(Q8),
 	.iD6(Q9),
 	.iLoad(Q11),
-	.iP(Q11),
+	.iP(Q10),
 	.nReset(A8)
 );
 endmodule // TEAMG_DESIGN
