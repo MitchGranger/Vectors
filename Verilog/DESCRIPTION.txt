@@ -1,0 +1,3 @@
+TEAMG_DESIGN.v is original file.
+TEAMG_DESIGN_V2.v has the terminal/node name changes on the top level design.
+TEAMG_DESIGN_V3.v has the changes to circuit 3.
