@@ -1,0 +1,28 @@
+#9-bit Sequence Recognition
+#Testing an error at state 0100 when an incorrect bit is detected
+
+<PinDef>
+	A3, A4, A5, Q2
+	#ClockSeq, nResetSeq, DataIn, MatchAll
+</PinDef>
+<TestVector>
+	000 0
+	
+	#Error at 0100
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	#Back to state: 0111
+	
+	#Complete Sequence
+	C10 0
+	C11 0
+	C10 0
+	C11 1
+	
+</TestVector>
