@@ -1,12 +1,31 @@
-# 9-bit Sequence Recognition
+##############################################################################
+##																			##
+##	9-bit Sequence Recognition												##
+##	Thi is Bit_Sequence_2.vec adapted for Team F's specific bit sequence.	##
+##																			##
+##	Bit Sequence: 110110011													##
+##																			##
+##############################################################################
+
 <PinDef>
 	A3, A4, A5, Q2
 	#ClockSeq, nResetSeq, DataIn, MatchAll
 </PinDef>
 <TestVector>
+	#reset
 	000 0
+	#start of first sequence
 	C11 0
 	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C10 0
+	#start of second sequence
+	C11 0
+	C11 1
+	#end of first sequence
 	C10 0
 	C11 0
 	C11 0
@@ -14,15 +33,9 @@
 	C10 0
 	C11 0
 	C11 1
-#	C11 0
+	#end of second sequence
 	C10 0
-	C11 0
-	C11 0
-	C10 0
-	C10 0
-	C11 0
-	C11 1
-	000 0															
+	#reset
+	000 0													
 </TestVector>
 
-#Bit Sequence: 110110011

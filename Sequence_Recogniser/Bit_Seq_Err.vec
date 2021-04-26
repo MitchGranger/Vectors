@@ -1,10 +1,22 @@
-# 9-bit Sequence Recognition
+##############################################################################
+##																			##
+##	9-bit Sequence Recognition												##
+##	This inputs a single bit sequences but with the last bit toggled to		##
+##	incorrect to test that the circuit can identify when a bit sequence		##
+##	is incorrect.															##
+##																			##
+##	Bit Sequence: 110110101													##
+##																			##
+##############################################################################
+
 <PinDef>
 	A3, A4, A5, Q2
 	#ClockSeq, nResetSeq, DataIn, MatchAll
 </PinDef>
 <TestVector>
+	#reset
 	000 0
+	#start sequence
 	C11 0
 	C11 0
 	C10 0
@@ -13,8 +25,8 @@
 	C10 0
 	C11 0
 	C10 0
+	#incorrect bit
 	C10 0
+	#reset
 	000 0															
 </TestVector>
-
-#Bit Sequence: 110110101

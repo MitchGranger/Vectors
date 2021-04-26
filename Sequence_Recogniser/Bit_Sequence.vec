@@ -1,10 +1,20 @@
-# 9-bit Sequence Recognition
+##############################################################################
+##																			##
+##	9-bit Sequence Recognition												##
+##	This inputs a single correct bit sequence.								##
+##																			##
+##	Bit Sequence: 110110101													##
+##																			##
+##############################################################################
+
 <PinDef>
 	A3, A4, A5, Q2
 	#ClockSeq, nResetSeq, DataIn, MatchAll
 </PinDef>
 <TestVector>
+	#reset
 	000 0
+	#start sequence
 	C11 0
 	C11 0
 	C10 0
@@ -14,8 +24,8 @@
 	C11 0
 	C10 0
 	C11 1
+	#end of sequence
 	C10 0
-	010 0
+	#reset
+	000 0
 </TestVector>
-
-#Bit Sequence: 110110101

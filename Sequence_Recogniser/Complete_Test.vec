@@ -1,12 +1,10 @@
 ##############################################################################
 ##																			##
 ##	9-bit Sequence Recognition												##
-##	This takes the circuit through all states that it is possible to enter	##
-##	by toggling the data input. Only the output node, MatchAll, can be		##
-##	observed from the circuit so these vectors test an incorrect bit at		##
-##	every state and then inputs the correct bit stream to achieve MatchAll	##
-##	high from whatever state the circuit should ideally be in.				##
+##	--------------------------												##
 ##																			##
+##	This runs a combination of other vector sequences created for testing	##
+##	the circuit for submission and a single thorough test.					##
 ##	Correct bit sequence: 110110101											##
 ##																			##
 ##	State order:															##
@@ -22,6 +20,24 @@
 ##		1000		(MatchAll high)											##
 ##	End																		##
 ##																			##
+##--------------------------------------------------------------------------##
+##																			##
+##	The first vector sequence inputs a single correct bit sequence to see	##
+##	if the circuit will correctly identify it.								##
+##																			##
+##	The second vector sequence inputs a sequence with an incorrect lat 		##
+##	as a basic test that the circuit can recognise an incorrect sequence.	##
+##																			##
+##	The third vector sequence inputs two overlapping bit sequences to		##
+##	test that this required functionality.									##
+##																			##
+##	The fourth vector sequence take the circuit through all states that it 	##
+##	is possible to enter by toggling the data input. Only the output node, 	##
+##	MatchAll, can be observed from the circuit so these vectors test an 	##
+##	incorrect bit at every state and then inputs the correct bit stream to	##
+##	achieve MatchAll high from whatever state the circuit should ideally 	##
+##	be in.																	##
+##																			##
 ##############################################################################
 
 <PinDef>
@@ -29,6 +45,72 @@
 	#ClockSeq, nResetSeq, DataIn, MatchAll
 </PinDef>
 <TestVector>
+##############################################################################
+##							 First Vector Sequence							##
+##############################################################################
+	
+	#reset
+	000 0
+	#input sequence
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 1
+	
+##############################################################################
+##							Second Vector Sequence							##
+##############################################################################
+
+	#reset
+	000 0
+	#input sequence
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	#incorrect bit
+	C10 0
+	
+##############################################################################
+##							 Third Vector Sequence							##
+##############################################################################
+
+	#reset
+	000 0
+	#first input sequence
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	#last bit of first sequence
+	#first bit of second sequence
+	C11 1
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 1
+	
+##############################################################################
+##							Fourth Vector Sequence							##
+##############################################################################
+
 	#Reset
 	000 0
 	
@@ -220,5 +302,5 @@
 	C11 1
 	
 	#End of test
-	
+
 </TestVector>

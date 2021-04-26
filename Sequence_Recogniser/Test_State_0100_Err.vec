@@ -1,5 +1,24 @@
-#9-bit Sequence Recognition
-#Testing an error at state 0100 when an incorrect bit is detected
+##############################################################################
+##																			##
+##	9-bit Sequence Recognition												##
+##	Testing an error at state 0100 when an incorrect bit is detected.		##
+##																			##
+##	Bit Sequence: 110110101													##
+##																			##
+##	State order:															##
+##		0000	1	(Default)												##
+##		0001	1															##
+##		0011	0															##
+##		0010	1															##
+##		0110	1															##
+##		0111	0															##
+##		0101	1															##
+##		0100	0															##
+##		1100	1															##
+##		1000		(MatchAll high)											##
+##	End																		##
+##																			##
+##############################################################################
 
 <PinDef>
 	A3, A4, A5, Q2
