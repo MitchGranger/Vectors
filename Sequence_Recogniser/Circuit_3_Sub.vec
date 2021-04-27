@@ -1,0 +1,144 @@
+##############################################################################
+##																			##
+##	9-bit Sequence Recognition												##
+##	--------------------------												##
+##																			##
+##	This runs a combination of other vector sequences created for testing	##
+##	the circuit for submission and a single thorough test.					##
+##	Correct bit sequence: 110110101											##
+##																			##
+##	State order:															##
+##		0000	1	(Default)												##
+##		0001	1															##
+##		0011	0															##
+##		0010	1															##
+##		0110	1															##
+##		0111	0															##
+##		0101	1															##
+##		0100	0															##
+##		1100	1															##
+##		1000		(MatchAll high)											##
+##	End																		##
+##																			##
+##--------------------------------------------------------------------------##
+##																			##
+##	First Vector Sequence:													##
+##	Inputs a single correct bit sequence to see	if the circuit will 		##
+##	correctly identify it and when the input sequence is detected it 		##
+##	tests if MatchAll is asserted  correctly for a single clock cycle.		##
+##																			##
+##	Second Vector Sequence:													##
+##	Inputs a single correct vector sequence either side of some random		##
+##	bits. 																	##
+##	Timing is not tested by this sequence.									##
+##																			##
+##	Third Vector Sequence:													##
+##	Inputs two overlapping bit sequences to test that this required 		##
+##	functionality. Followed by some random bits.							##
+##	Timing is not tested by this sequence.									##
+##																			##
+##	Fourth Vector Sequence:													##
+##	Tests the transitions of the state machine by applying the incorrect	##
+##	bit at each state to ensure it changes to the correct 'fail' state.		##
+##	After each state is tested, the correct sequence is applied for 		##
+##	whatever the expected state is. An error has occurred in a state if		##
+##	MatchAll is not asserted before the next reset.							##
+##																			##
+##############################################################################
+
+<PinDef>
+	A3, A4, A5, Q2
+	#ClockSeq, nResetSeq, DataIn, MatchAll
+</PinDef>
+
+<TestVector>
+##############################################################################
+##							 First Vector Sequence							##
+##############################################################################
+	
+	#reset
+	000 0
+	#input sequence
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	#Assert last bit without clock to test MatchAll timing
+	011	0
+	111 1
+	011	1
+	111	1
+	
+##############################################################################
+##							Second Vector Sequence							##
+##############################################################################
+	#reset
+	000 0
+	
+	#random bits
+	C10 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	#input sequence
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 1
+	#random bits
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	
+##############################################################################
+##							 Third Vector Sequence							##
+##############################################################################
+
+	#reset
+	000 0
+	#first input sequence
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	#last bit of first sequence
+	#first bit of second sequence
+	C11 1
+	C11 0
+	C10 0
+	C11 0
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	C11 1
+	#random bits
+	C11 0
+	C10 0
+	C11 0
+	C10 0
+	
+</TestVector>
