@@ -1,0 +1,266 @@
+# vsim -voptargs="+acc" work.test_TEAMG_DESIGN 
+# Start time: 20:16:09 on Apr 27,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 22, found 4.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'A8'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q10'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q11'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q9'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q8'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q7'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q6'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q5'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q4'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q3'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'A9'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q1'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'Q0'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'A7'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'A2'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'A1'.
+# ** Warning: H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(26): (vopt-2718) [TFMPC] - Missing connection for port 'A0'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=18.
+# Loading work.test_TEAMG_DESIGN(fast)
+# Loading work.TEAMG_DESIGN(fast)
+# Loading work.INV1(fast)
+# Loading work.TEAMG_Circuit2(fast)
+# Loading work.TEAMG_Circuit2Divider(fast)
+# Loading work.DFFR(fast)
+# Loading work.NAND3(fast)
+# Loading work.NAND4(fast)
+# Loading work.NOR2(fast)
+# Loading work.NOR4(fast)
+# Loading work.TEAMG_Circuit2Osc(fast)
+# Loading work.NAND2(fast)
+# Loading work.TEAMG_Circuit3(fast)
+# Loading work.XOR2(fast)
+# Loading work.TEAMG_Circuit4(fast)
+# Loading work.TEAMG_Circuit4_Control(fast)
+# Loading work.TEAMG_Circuit4_Control_ClockDiv(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn0(fast)
+# Loading work.NOR3(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn1(fast)
+# Loading work.XNR2(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn2(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn3(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn4(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn5(fast)
+# Loading work.TEAMG_Circuit4_Control_iLoad(fast)
+# Loading work.TEAMG_Circuit4_Retiming(fast)
+# Loading work.TEAMG_Circuit4_ShiftRegister(fast)
+add wave -position insertpoint  \
+sim:/test_TEAMG_DESIGN/A3 \
+sim:/test_TEAMG_DESIGN/A4 \
+sim:/test_TEAMG_DESIGN/A5 \
+sim:/test_TEAMG_DESIGN/Q2 \
+sim:/test_TEAMG_DESIGN/errors_Q2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mg1g19  Hostname: JFB59-R2203-B25  ProcessID: 12476
+#           Attempting to use alternate WLF file "./wlftfid2zz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfid2zz
+run -all
+# COMPILATION OK
+# Simulation Begins
+#   AAA  Q
+#   345  2
+#         
+# v 000  0
+#   000  x  @                    0 ns
+#   000  0  @                    3 ns
+# r      0
+#         
+# 
+# v 011  X
+#   011  0  @                 1000 ns
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                 2000 ns
+# r      0
+#         
+# 
+# v 011  0
+#   011  0  @                 3000 ns
+# r      0
+#         
+# 
+# v 011  X
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                 5000 ns
+# r      0
+#         
+# 
+# v 011  0
+#   011  0  @                 6000 ns
+# r      0
+#         
+# 
+# v 010  X
+#   010  0  @                 7000 ns
+# r      0
+#         
+# 
+# v 110  X
+#   110  0  @                 8000 ns
+# r      0
+#         
+# 
+# v 010  0
+#   010  0  @                 9000 ns
+# r      0
+#         
+# 
+# v 011  X
+#   011  0  @                10000 ns
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                11000 ns
+# r      0
+#         
+# 
+# v 011  0
+#   011  0  @                12000 ns
+# r      0
+#         
+# 
+# v 011  X
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                14000 ns
+# r      0
+#         
+# 
+# v 011  0
+#   011  0  @                15000 ns
+# r      0
+#         
+# 
+# v 010  X
+#   010  0  @                16000 ns
+# r      0
+#         
+# 
+# v 110  X
+#   110  0  @                17000 ns
+# r      0
+#         
+# 
+# v 010  0
+#   010  0  @                18000 ns
+# r      0
+#         
+# 
+# v 011  X
+#   011  0  @                19000 ns
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                20000 ns
+# r      0
+#         
+# 
+# v 011  0
+#   011  0  @                21000 ns
+# r      0
+#         
+# 
+# v 011  X
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                23000 ns
+# r      0
+#         
+# 
+# v 011  0
+#   011  0  @                24000 ns
+# r      0
+#         
+# 
+# v 010  X
+#   010  0  @                25000 ns
+# r      0
+#         
+# 
+# v 110  X
+#   110  0  @                26000 ns
+# r      0
+#         
+# 
+# v 010  0
+#   010  0  @                27000 ns
+# r      0
+#         
+# 
+# v 011  X
+#   011  0  @                28000 ns
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                29000 ns
+#   111  1  @                29004 ns
+# r      1
+#         
+# 
+# v 011  0
+#   011  1  @                30000 ns
+# r      1
+#        ^
+# error with Q2 @                30500 ns
+# 
+# 
+# v 010  X
+#   010  1  @                31000 ns
+# r      1
+#         
+# 
+# v 110  X
+#   110  1  @                32000 ns
+#   110  0  @                32003 ns
+# r      0
+#         
+# 
+# v 010  0
+#   010  0  @                33000 ns
+# r      0
+#         
+# 
+# v 011  X
+#   011  0  @                34000 ns
+# r      0
+#         
+# 
+# v 111  X
+#   111  0  @                35000 ns
+# r      0
+#         
+# 
+# v 011  1
+#   011  0  @                36000 ns
+# r      0
+#        ^
+# error with Q2 @                36500 ns
+# 
+# 
+# 
+# SIMULATION Failed
+# 
+#                  2 errors with Q2 
+# 
+# Total:           2 errors
+# 
+# ** Note: $stop    : H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v(187)
+#    Time: 37 us  Iteration: 0  Instance: /test_TEAMG_DESIGN
+# Break in Module test_TEAMG_DESIGN at H:/Uni/Year_2/Semester_2/D2/Simulation/test_TEAMG_DESIGN.v line 187
