@@ -1,0 +1,106 @@
+# Compile of d2lib.v was successful.
+# Compile of TEAMG_DESIGN.v was successful.
+# Compile of test_TEAMG_DESIGN.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.test_TEAMG_DESIGN
+# vsim -voptargs="+acc" work.test_TEAMG_DESIGN 
+# Start time: 11:32:23 on Apr 27,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 22, found 3.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A8'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q10'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q11'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q9'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q8'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q7'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q6'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q5'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q4'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q3'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A9'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q2'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'Q0'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A7'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A5'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A4'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A3'.
+# ** Warning: H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'A0'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=19.
+# Loading work.test_TEAMG_DESIGN(fast)
+# Loading work.TEAMG_DESIGN(fast)
+# Loading work.INV1(fast)
+# Loading work.TEAMG_Circuit2(fast)
+# Loading work.TEAMG_Circuit2Divider(fast)
+# Loading work.DFFR(fast)
+# Loading work.NAND3(fast)
+# Loading work.NAND4(fast)
+# Loading work.NOR2(fast)
+# Loading work.NOR4(fast)
+# Loading work.TEAMG_Circuit2Osc(fast)
+# Loading work.NAND2(fast)
+# Loading work.TEAMG_Circuit3(fast)
+# Loading work.XOR2(fast)
+# Loading work.TEAMG_Circuit4(fast)
+# Loading work.TEAMG_Circuit4_Control(fast)
+# Loading work.TEAMG_Circuit4_Control_ClockDiv(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn0(fast)
+# Loading work.NOR3(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn1(fast)
+# Loading work.XNR2(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn2(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn3(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn4(fast)
+# Loading work.TEAMG_Circuit4_Control_Qn5(fast)
+# Loading work.TEAMG_Circuit4_Control_iLoad(fast)
+# Loading work.TEAMG_Circuit4_Retiming(fast)
+# Loading work.TEAMG_Circuit4_ShiftRegister(fast)
+add wave -position insertpoint sim:/test_TEAMG_DESIGN/*
+add wave -position insertpoint  \
+sim:/test_TEAMG_DESIGN/A1 \
+sim:/test_TEAMG_DESIGN/A2 \
+sim:/test_TEAMG_DESIGN/Q1 \
+sim:/test_TEAMG_DESIGN/errors_Q1 \
+sim:/test_TEAMG_DESIGN/errors
+run
+# COMPILATION OK
+# Simulation Begins
+#   AA  Q
+#   12  1
+#        
+# v 00  0
+#   00  x  @                    0 ns
+#   00  0  @                    3 ns
+# r     0
+#        
+# 
+# v 11  X
+#   11  0  @                 1000 ns
+# r     0
+#        
+# 
+# v 10  0
+#   10  0  @                 2000 ns
+# r     0
+#        
+# 
+# v 11  0
+#   11  0  @                 3000 ns
+# r     0
+#        
+# 
+# v 00  0
+#   00  0  @                 4000 ns
+# r     0
+#        
+# 
+# v 11  X
+#   11  0  @                 5000 ns
+# r     0
+#        
+# 
+# SIMULATION OK
+# All vectors passed
+# ** Note: $stop    : H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v(91)
+#    Time: 6 us  Iteration: 0  Instance: /test_TEAMG_DESIGN
+# Break in Module test_TEAMG_DESIGN at H:/Year2/ElectronicDesign/D2/27thOscillator/test_TEAMG_DESIGN.v line 91
+# Causality operation skipped due to absence of debug database file
