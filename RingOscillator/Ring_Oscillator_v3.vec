@@ -1,0 +1,19 @@
+<PinDef>
+A1, A2, Q1
+</PinDef>
+
+<TestVector>
+# ring oscillator system
+# Resets to force into first state and then tests for a "don't care" result when enabled.
+# Then another reset signal is given, and reset unenables, checking the restult is still 0
+# Then left in state 11 for the oscillator to run for oscilliscope testing in the lab
+
+	00 0
+	11 X
+	00 0
+	10 0
+	11 X
+
+
+</TestVector>
+# End of the test vector file
