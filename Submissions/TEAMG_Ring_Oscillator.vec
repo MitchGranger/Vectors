@@ -1,0 +1,34 @@
+##############################################################################
+##																			##
+##    Ring Oscillator System												##
+##	--------------------------												##
+##																			##
+##	This file runs some basic vector sequences to test the circuit for the  ##
+##	correct functionality. It will be used in conjuncture with laboratory   ##
+##	measurements for the frequency.											##
+##																			##
+##	Sequence:																##
+##	Resets to force the circuit into the 0 state then tests for a "don't	##
+##	care" reult when the system is enabled. Tests that it can be correctly	##
+##	reset from here, tests a 0 output with no enable signal and then		##
+##	leaves the circuit oscillating for lab tests.							##
+##																			##
+##############################################################################
+
+<PinDef>
+	A1, A2, Q1
+	#nResetOsc,	EnableOsc,	A2
+</PinDef>
+
+<TestVector>
+	#reset
+	00 0
+	#test oscillator
+	11 X
+	#reset
+	00 0
+	10 0
+	#leave for lab test
+	11 X
+
+</TestVector>
