@@ -1,0 +1,182 @@
+# Test Vector File
+<PinDef>
+	A7,A8,A9,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11
+	#Clock228 ,nReset, Rx, iD0, iD1, iD2, iD3, iD4, iD5, iD6, iP, iLoad
+</PinDef>
+<TestVector>
+	#reset
+	000 000000000
+
+#----------------------------------------------------------------------------#
+	
+	#Test state: 000000	(default)
+
+	#idle
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	#start bit
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	#character bits
+		#iD0
+		C1X XXXXXXXX1
+		C1X XXXXXXXX1
+		C1X XXXXXXXX1
+		#iD1
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		#iD2
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		#iD3
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		#iD4
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		#iD5
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		#iD6
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		#iP
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+		C1X XXXXXXXX0
+	#stop bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 111111111
+	C11 111111111
+	#if outputs are asserted correctly,
+	#responding correctly to different values at start bit
+
+#----------------------------------------------------------------------------#
+
+	#Now test the circuits response to subsequent data
+	#Immediate transmition
+	
+	#start bit
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	
+	#character bits
+		#iD0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD1
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD2
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD3
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD4
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD5
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD6
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iP
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		
+	#stop bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	C11 XXXXXXXX0
+	C11 111111111
+	C11 111111111
+	
+#----------------------------------------------------------------------------#
+
+	#Now test the circuits response to subsequent data
+	#Transmition after some idle bits
+	
+	#idle bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	
+	#start bit
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	
+	#character bits
+		#iD0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD1
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD2
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD3
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD4
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD5
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD6
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iP
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		
+	#stop bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	C11 XXXXXXXX0
+	C11 111111111
+	C11 111111111
+
+</TestVector>
