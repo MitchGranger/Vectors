@@ -1,0 +1,52 @@
+View Results:
+Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q19 Q20 Q21 Q22 Q23 
+
+Vec             Inputs                     Outputs
+    AAAAAAAA AAAAAAAA AAAAAAAA  QQQQQQQQ QQQQQQQQ QQQQQQQQ 
+    01234567 89111111 11112222  01234567 89111111 11112222 
+               012345 67890123             012345 67890123 
+
+  1 00000000 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  2 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  3 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  4 000C1000 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  5 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  6 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  7 000C1000 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  8 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  9 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+ 10 000C1000 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+ 11 000C1100 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10100000 00000000 00000000 
+                                  ^                        Errors: 1
+ 12 000C1000 00000000 00000000  XX0XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+ 13 000C1100 00000000 00000000  XX1XXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                  ^                        Errors: 1
+       2 errors with Q2
+Total Error Count = 2
+
+
+Problems with test vector results

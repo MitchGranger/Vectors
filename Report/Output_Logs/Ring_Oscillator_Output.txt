@@ -1,0 +1,27 @@
+View Results:
+Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q19 Q20 Q21 Q22 Q23 
+
+Vec             Inputs                     Outputs
+    AAAAAAAA AAAAAAAA AAAAAAAA  QQQQQQQQ QQQQQQQQ QQQQQQQQ 
+    01234567 89111111 11112222  01234567 89111111 11112222 
+               012345 67890123             012345 67890123 
+
+  1 00000000 00000000 00000000  X0XXXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  2 01100000 00000000 00000000  XXXXXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  3 00000000 00000000 00000000  X0XXXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  4 01000000 00000000 00000000  X0XXXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+  5 01100000 00000000 00000000  XXXXXXXX XXXXXXXX XXXXXXXX 
+                                10000000 00000000 00000000 
+                                                           
+Total Error Count = 0
+
+
+Test Completed OK
