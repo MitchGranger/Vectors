@@ -23,21 +23,25 @@
 ##--------------------------------------------------------------------------##
 ##																			##
 ##	First Vector Sequence:													##
+##	----------------------													##
 ##	Inputs a single correct bit sequence to see	if the circuit will 		##
 ##	correctly identify it and when the input sequence is detected it 		##
 ##	tests if MatchAll is asserted  correctly for a single clock cycle.		##
 ##																			##
 ##	Second Vector Sequence:													##
+##	-----------------------													##
 ##	Inputs a single correct vector sequence either side of some random		##
 ##	bits. 																	##
 ##	Timing is not tested by this sequence.									##
 ##																			##
 ##	Third Vector Sequence:													##
+##	----------------------													##
 ##	Inputs two overlapping bit sequences to test that this required 		##
 ##	functionality. Followed by some random bits.							##
 ##	Timing is not tested by this sequence.									##
 ##																			##
 ##	Fourth Vector Sequence:													##
+##	-----------------------													##
 ##	Tests the transitions of the state machine by applying the incorrect	##
 ##	bit at each state to ensure it changes to the correct 'fail' state.		##
 ##	After each state is tested, the correct sequence is applied for 		##
