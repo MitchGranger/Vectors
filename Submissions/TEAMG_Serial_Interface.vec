@@ -1,9 +1,62 @@
-# Test Vector File
+##############################################################################
+##																			##
+##	Asynchronous Serial Interface											##
+##	-----------------------------											##
+##																			##
+##	This is a series of vectors designed to test circuit 4 against the 		##
+##	specfication.															##
+##																			##
+##--------------------------------------------------------------------------##
+##																			##
+##	First Vector Sequence:													##
+##	----------------------													##
+##	A single sequence is inputted to the circuit to test the basic			##
+##	functionality.															##
+##																			##
+##	Second Vector Sequence:													##
+##	-----------------------													##
+##	The first section tests that the circuit responds correctly to an idle	##
+##	bit of 1. If iLoad is asserted 3 clock cycles earlier than defined in	##
+##	these vectors, the circuit isn't reliant on the start bit.				##
+##	The second section test the circuits response to a new transmission		##
+##	occurring immediately after the previous one has concluded.				##
+##	The third section tests the circuit when a couple of idle bits occur	##
+##	between the old transmission and the new one.							##
+##																			##
+##	Third Vector Sequence:													##
+##	----------------------													##
+##	These vectors tests the timing of the circuit.							##
+##	No clock signals are used and the clock is administered manually with	##
+##	1 and 0 bits to allow more accurate analysis to occur and to allow		##
+##	more thorough test to be carried out within a clock cycle.				##
+##	The bit samples should be taken on the second rising edge from the 		##
+##	clock. These are indicated in the file by lines of #'s, for example:	##
+##																			##
+##	#############															##
+##	XXX XXXXXXXXX															##
+##	XXX XXXXXXXXX															##
+##	#############															##
+##				 															##
+##	For ease of observation, the message that's passed into the circuit		##
+##	is a series of alternating its starting with a 1.						##
+##	Outside of this clock cycle the input data can be anything to test		##
+##	that the sample is being taken on the correct edge and is unaffected	##
+##	by the values around that edge. Subsequently, these vectors are also	##
+##	testing the circuits susceptibility to noise.							##
+##	At the end, an extra 3 clock cycles are added to test that the iLoad	##
+##	signal is asserted for the correct number of clock cycles.				##
+##																			##
+##############################################################################
+
 <PinDef>
 	A7,A8,A9,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11
 	#Clock228 ,nReset, Rx, iD0, iD1, iD2, iD3, iD4, iD5, iD6, iP, iLoad
 </PinDef>
+
 <TestVector>
+##############################################################################
+##							First Vector Sequence							##
+##############################################################################
 	#reset
 	000 000000000
 	#idle
@@ -58,36 +111,186 @@
 	000 000000000
 	
 ##############################################################################
-##																			##
-##	Asynchronous Serial Interface											##
-##	----------------------------											##
-##																			##
-##	These vectors tests the timing of the circuit.							##
-##	No clock signals are used and the clock is administered manually with	##
-##	1 and 0 bits to allow more accurate analysis to occur and to allow		##
-##	more thorough test to be carried out within a clock cycle.				##
-##																			##
-##	The bit samples should be taken on the second rising edge from the 		##
-##	clock. These are indicated in the file by lines of #'s, for example:	##
-##																			##
-##	#############															##
-##	XXX XXXXXXXXX															##
-##	XXX XXXXXXXXX															##
-##	#############															##
-##				 															##
-##	For ease of observation, the message that's passed into the circuit		##
-##	is a series of alternating its starting with a 1.						##
-##																			##
-##	Outside of this clock cycle the input data can be anything to test		##
-##	that the sample is being taken on the correct edge and is unaffected	##
-##	by the values around that edge. Subsequently, these vectors are also	##
-##	testing the circuits susceptibility to noise.							##
-##																			##
-##	At the end, an extra 3 clock cycles are added to test that the iLoad	##
-##	signal is asserted for the correct number of clock cycles.				##
-##																			##
+##							Second Vector Sequence							##
 ##############################################################################
+	#reset
+	000 000000000
 
+#----------------------------------------------------------------------------#
+	
+	#Test state: 000000	(default)
+
+	#idle
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	#start bit
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	#character bits
+		#iD0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD1
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD2
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD3
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD4
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD5
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD6
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iP
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+	#stop bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 111111111
+	C11 111111111
+	#if outputs are asserted correctly,
+	#responding correctly to different values at start bit
+
+#----------------------------------------------------------------------------#
+
+	#Now test the circuits response to subsequent data
+	#Immediate transmition
+	
+	#start bit
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	
+	#character bits
+		#iD0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD1
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD2
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD3
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD4
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD5
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD6
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iP
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		
+	#stop bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	C11 XXXXXXXX0
+	C11 111111111
+	C11 111111111
+	
+#----------------------------------------------------------------------------#
+
+	#Now test the circuits response to subsequent data
+	#Transmition after some idle bits
+	
+	#idle bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	
+	#start bit
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	C10 XXXXXXXX0
+	
+	#character bits
+		#iD0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD1
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD2
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD3
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD4
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD5
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iD6
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		#iP
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		C11 XXXXXXXX0
+		
+	#stop bits
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	C11 XXXXXXXX0
+	
+	C11 XXXXXXXX0
+	C11 111111111
+	C11 111111111
+	
+##############################################################################
+##							 Third Vector Sequence							##
+##############################################################################
 	#reset
 	000 000000000
 	
@@ -231,10 +434,5 @@
 	010 101010100
 	110 101010100
 	010 101010100
-	
-	#reset
-	000 000000000
-
-
 	
 </TestVector>
